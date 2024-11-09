@@ -1,0 +1,41 @@
+﻿<Page x:Class="FleetEquipment.Vehicle"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FleetEquipment"
+      mc:Ignorable="d" 
+      d:DesignHeight="200" d:DesignWidth="500"
+      Title="Vehicle">
+
+    <Grid>
+        <DataGrid x:Name="DataGridVehicle"  AutoGenerateColumns="False" IsReadOnly="True" Margin="0,0,0,50" FontFamily="Source Sans Pro Black">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ID}" Header="ID" Width="*" />
+                <DataGridTextColumn Binding="{Binding TransmissionText}" Header="Коробка передач" Width="*" />
+                <DataGridTextColumn Binding="{Binding Body_type}" Header="Тип кузова" Width="*" />
+                <DataGridTextColumn Binding="{Binding InStock}" Header="В наличии" Width="*" />
+                <DataGridTextColumn Binding="{Binding Type}" Header="Транспорт" Width="*" />
+                <DataGridTextColumn Binding="{Binding Manufacturer}" Header="Марка" Width="*" />
+                <DataGridTextColumn Binding="{Binding Color}" Header="Цвет" Width="*" />
+                <DataGridTextColumn Binding="{Binding User}" Header="Пользователь" Width="*" />
+                <DataGridTemplateColumn Header="Изменение" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="But_Update" Content="Изменить" Click="But_Update_Click" CommandParameter="{Binding ID}" Background="#FFBD7900"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Удаление" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="But_Delete" Content="Удалить" Click="But_Delete_Click" CommandParameter="{Binding ID}" Background="#FF805302"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="AddVehicle" Content="Добавить" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Width="500" Height="50" BorderBrush="Black" Background="#FFFFB13F" FontFamily="Source Sans Pro Black" FontSize="18" Foreground="White" Click="AddVehicle_Click"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="FleetEquipment.MainTechnician"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FleetEquipment"
+        mc:Ignorable="d"
+        Title="Главная форма техника" Height="450" Width="800" Icon="/icons8-tools-24.png" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFECD2B2">
+        <TextBlock x:Name="Welcome_TextBlock" HorizontalAlignment="Left" Margin="602,10,0,0" TextWrapping="Wrap" Text="ФИО" VerticalAlignment="Top" FontFamily="Source Sans Pro Black" FontSize="14" Width="193"/>
+        <Image HorizontalAlignment="Left" Height="235" Margin="639,304,0,0" VerticalAlignment="Top" Width="289" Source="/tire-tracks-white-background-your-presentation_546559-1463 (1).png"/>
+        <Image HorizontalAlignment="Left" Height="68" Margin="10,343,0,0" VerticalAlignment="Top" Width="80" Source="/icons8-truck-96.png">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/icons8-truck-96.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image HorizontalAlignment="Left" Height="67" Margin="94,343,0,0" VerticalAlignment="Top" Width="80" Source="/icons8-shuttle-bus-96.png"/>
+        <Image HorizontalAlignment="Left" Height="66" Margin="51,287,0,0" VerticalAlignment="Top" Width="80" Source="/icons8-sedan-96.png"/>
+        <TextBlock HorizontalAlignment="Left" Margin="32,337,0,0" TextWrapping="Wrap" Text="Techno-Auto" VerticalAlignment="Top" FontFamily="Source Sans Pro Black" Width="91" FontWeight="Bold" Foreground="#FFFFA608" Height="23" FontSize="16" Background="#FFECCEA9"/>
+        <DataGrid x:Name="DataGridFix"  AutoGenerateColumns="False" IsReadOnly="True" Margin="32,32,242,163" FontFamily="Source Sans Pro Black" LoadingRow="DataGridFix_LoadingRow" CellEditEnding="DataGridFix_CellEditEnding">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ID}" Header="ID" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding ID_Technician}" Header="ФИО" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Status_FleetEquipment.Name}" Header="Статус" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Start_Date}" Header="Дата начала" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding End_Date}" Header="Дата окончания" Width="*"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Изменение" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="But_Update" Content="Изменить" Click="But_Update_Click" CommandParameter="{Binding ID}" Background="#FFBD7900"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock x:Name="WelcomeTextBlock" Text="Готовы огласить статус?&#xA;Тогда измените его поскорее" Margin="0,332,0,0" Width="498" Height="53" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Source Sans Pro Black" FontSize="20" Foreground="Black" TextAlignment="Center"/>
+        <Image HorizontalAlignment="Left" Height="204" Margin="577,67,0,0" VerticalAlignment="Top" Width="212" Source="/icons8-traction-control-96.png"/>
+    </Grid>
+</Window>

@@ -1,0 +1,29 @@
+﻿<Window x:Class="FleetEquipment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FleetEquipment"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="400" Width="400" Icon="/icons1.png" FontFamily="Source Sans Pro Black" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="/Designer.jpeg" Stretch="UniformToFill" Opacity="0.3"/>
+    </Window.Background>
+    <Grid>
+        <Button x:Name="Entrance_Button" Content="Войти" HorizontalAlignment="Center" Margin="0,297,0,0" VerticalAlignment="Top" Height="38" Width="140" FontFamily="Source Sans Pro Black" FontSize="16" BorderBrush="Black" BorderThickness="1" Click="Entrance_Button_Click" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop/>
+                    <GradientStop Color="#FFFF2F00" Offset="1"/>
+                    <GradientStop Color="#FFFFA608" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="Login_TextBox" HorizontalAlignment="Left" Margin="153,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="176" Height="33" FontFamily="Source Sans Pro Black" FontSize="20"/>
+        <PasswordBox x:Name="Password_TextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="176"  Height="33" Margin="153,216,0,0" PasswordChar="*" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,21,0,0" TextWrapping="Wrap" Text="Techno-Auto" VerticalAlignment="Top" FontFamily="Source Sans Pro Black" FontSize="36" Width="210" FontWeight="Bold" Foreground="#FFFFA608"/>
+        <Label Content="Логин:" HorizontalAlignment="Left" Margin="54,118,0,0" VerticalAlignment="Top" FontFamily="Source Sans Pro Black" FontSize="20" Height="33" Foreground="#FFFFA608"/>
+        <Label Content="Пароль:" HorizontalAlignment="Left" Margin="54,216,0,0" VerticalAlignment="Top" FontFamily="Source Sans Pro Black" FontSize="20" Height="33" Foreground="#FFFFA608"/>
+
+    </Grid>
+</Window>

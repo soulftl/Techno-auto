@@ -1,0 +1,42 @@
+﻿<Page x:Class="FleetEquipment.User"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FleetEquipment"
+      mc:Ignorable="d" 
+      d:DesignHeight="200" d:DesignWidth="500"
+      Title="User">
+
+    <Grid>
+        <DataGrid x:Name="DataGridUser"  AutoGenerateColumns="False" IsReadOnly="True" Margin="0,0,0,50" FontFamily="Source Sans Pro Black">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ID}" Header="ID" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Last_name}" Header="Фамилия" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding First_name}" Header="Имя" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Patronymic}" Header="Отчество" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Date_of_birth}" Header="Дата рождения" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Phone}" Header="Телефон" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Login}" Header="Логин" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Password}" Header="Пароль" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding ID_Role_FleetEquipment}" Header="Роль" Width="*"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Изменение" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="But_Update" Content="Изменить" Click="But_Update_Click" CommandParameter="{Binding ID}" Background="#FFBD7900"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Увольнение" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="But_Delete" Content="Уволить" Click="But_Delete_Click" CommandParameter="{Binding ID}" Background="#FF805302"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="AddButton" Content="Добавить" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Width="500" Height="50" BorderBrush="Black" Background="#FFFFB13F" FontFamily="Source Sans Pro Black" FontSize="18" Foreground="White" Click="AddButton_Click" />
+
+    </Grid>
+</Page>

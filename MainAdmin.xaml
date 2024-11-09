@@ -1,0 +1,44 @@
+﻿<Window x:Class="FleetEquipment.MainAdmin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FleetEquipment"
+        mc:Ignorable="d"
+        Title="Главная форма админа" Height="450" Width="800" Icon="/icons8-admin-48.png" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFECD2B2">
+
+        <Button x:Name="Vehicle" Grid.Column="1" Content="Транспорт. средство" HorizontalAlignment="Left" Margin="-18,115,0,0" VerticalAlignment="Top" Height="60" Width="250" BorderBrush="Black" FontFamily="Source Sans Pro Black" FontSize="18" Foreground="White" Background="#FFFFA608" Click="Vehicle_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="CarPark" Grid.Column="2" Content="Автопарк" HorizontalAlignment="Left" Margin="-18,215,0,0" VerticalAlignment="Top" Height="60" Width="250" BorderBrush="Black" FontFamily="Source Sans Pro Black" FontSize="18" Foreground="White" Background="#FFFFA608" Click="CarPark_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="User" Grid.Column="0" Content="Пользователь" HorizontalAlignment="Left" Margin="-18,19,0,0" VerticalAlignment="Top" Height="60" Width="250" BorderBrush="Black" FontFamily="Source Sans Pro Black" FontSize="18" Foreground="White" Background="#FFFFA608" Click="User_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="68" Margin="10,343,0,0" VerticalAlignment="Top" Width="80" Source="/icons8-truck-96.png">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/icons8-truck-96.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image HorizontalAlignment="Left" Height="67" Margin="94,343,0,0" VerticalAlignment="Top" Width="80" Source="/icons8-shuttle-bus-96.png"/>
+        <Image HorizontalAlignment="Left" Height="66" Margin="51,287,0,0" VerticalAlignment="Top" Width="80" Source="/icons8-sedan-96.png"/>
+        <Image HorizontalAlignment="Left" Height="220" Margin="654,306,0,0" VerticalAlignment="Top" Width="289" Source="/tire-tracks-white-background-your-presentation_546559-1463 (1).png"/>
+        <Frame ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" NavigationUIVisibility="Hidden" x:Name="MainFrame" Content="" Margin="261,19,19,159" Height="256"/>
+        <TextBlock HorizontalAlignment="Left" Margin="32,337,0,0" TextWrapping="Wrap" Text="Techno-Auto" VerticalAlignment="Top" FontFamily="Source Sans Pro Black" Width="91" FontWeight="Bold" Foreground="#FFFFA608" Height="23" FontSize="16" Background="#FFECCEA9"/>
+        <TextBlock x:Name="WelcomeTextBlock" Text="Привествуем вас!&#xA;Чтобы начать вносить какие-то изменения&#xA;нажмите одну из трех предложенных пунктов" Margin="272,101,0,0" Width="498" Height="92" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Source Sans Pro Black" FontSize="20" Foreground="Black" TextAlignment="Center"/>
+    </Grid>
+</Window>
